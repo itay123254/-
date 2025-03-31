@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שאלות ותשובות - Harmonic Vibes</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://www.offidocs.com/images/darktexturebackgroundblack.jpg') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+      direction: rtl;
+      padding: 20px;
+      margin: 0;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 30px;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .faq {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .faq-item h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #ffcc00;
+    }
+    .faq-item p {
+      font-size: 1.2em;
+      margin-left: 20px;
+      color: #ddd;
+      display: none;
+      transition: all 0.3s ease;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+      color: #ddd;
+      background-color: rgba(0, 0, 0, 0.9);
+      font-size: 0.9em;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">בית</a>
+    <a href="faq.html">שאלות ותשובות</a>
+    <a href="tips.html">טיפים</a>
+    <a href="examples.html">דוגמאות</a>
+    <a href="blog.html">בלוג</a>
+    <a href="contact.html">צור קשר</a>
+  </nav>
+
+  <h1>שאלות ותשובות</h1>
+
+  <section class="faq">
+    <div class="faq-item" onclick="toggleAnswer(this)">
+      <h3>מה זה Harmonic Vibes?</h3>
+      <p>Harmonic Vibes הוא אתר ייחודי המאפשר ליצור קריוקי משירים בצורה פשוטה ומהירה.</p>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+      <h3>איך אני מעלה שיר לקריוקי?</h3>
+      <p>ניתן להזין קישור מיוטיוב או להעלות קובץ MP3 ישירות דרך האתר.</p>
+    </div>
+    <div class="faq-item" onclick="toggleAnswer(this)">
+      <h3>האם יש עלות לשימוש באתר?</h3>
+      <p>כרגע השימוש באתר הוא חינמי, אך ייתכנו שדרוגים בתשלום בעתיד.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2024 Harmonic Vibes - כל הזכויות שמורות
+  </footer>
+
+  <script>
+    function toggleAnswer(element) {
+      const answer = element.querySelector("p");
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+      } else {
+        answer.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

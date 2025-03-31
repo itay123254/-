@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmonic Vibes - קריוקי</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://www.offidocs.com/images/darktexturebackgroundblack.jpg') no-repeat center center/cover;
+      color: white;
+      direction: rtl;
+      text-align: right;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .karaoke-container {
+      margin-top: 80px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    #lyrics {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">בית</a>
+    <a href="faq.html">שאלות ותשובות</a>
+    <a href="tips.html">טיפים</a>
+    <a href="examples.html">דוגמאות</a>
+    <a href="blog.html">בלוג</a>
+    <a href="contact.html">צור קשר</a>
+  </nav>
+
+  <section class="karaoke-container">
+    <h2>הפוך את השיר לקריוקי</h2>
+    <label for="urlInput">הזן קישור לשיר:</label>
+    <input type="text" id="urlInput" placeholder="הזן קישור לאודיו">
+    <br><br>
+    <button onclick="processKaraoke()">הפעל שיר</button>
+    <div id="loadingMessage" style="display:none;">מעבד את השיר שלך לקריוקי... אנא המתן.</div>
+    <audio id="vocals" controls></audio>
+    <audio id="music" controls></audio>
+  </section>
+
+  <script>
+    async function processKaraoke() {
+      const urlInput = document.getElementById("urlInput");
+      const loadingMessage = document.getElementById("loadingMessage");
+      const vocalsAudio = document.getElementById("vocals");
+      const musicAudio = document.getElementById("music");
+
+      const url = urlInput.value;
+      if (!url) {
+        alert("נא להזין קישור לשיר.");
+        return;
+      }
+
+      loadingMessage.style.display = "block";
+      
+      try {
+        // שלח את הקישור לשרת להורדה ועיבוד
+        const response = await fetch("/process_karaoke", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ url: url })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          vocalsAudio.src = result.vocals_url;
+          musicAudio.src = result.music_url;
+        } else {
+          throw new Error("שגיאה בעיבוד הקובץ.");
+        }
+      } catch (error) {
+        console.error(error);
+        alert("שגיאה בעיבוד הקובץ, נסה קובץ אחר.");
+        loadingMessage.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

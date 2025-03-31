@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דוגמאות קריוקי - Harmonic Vibes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://www.offidocs.com/images/darktexturebackgroundblack.jpg') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+      direction: rtl;
+      text-align: right;
+    }
+
+    /* כותרת הדף */
+    .header {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .header p {
+      font-size: 1.5em;
+    }
+
+    /* דוגמאות שירים */
+    .songs-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .song-item {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .song-item h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .song-item p {
+      font-size: 1.2em;
+    }
+
+    /* footer */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .songs-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .songs-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- כותרת הדף -->
+  <section class="header">
+    <h1>דוגמאות לשירים קריוקי</h1>
+    <p>בחר את השיר שאתה רוצה לשיר איתנו!</p>
+  </section>
+
+  <!-- דוגמאות שירים -->
+  <section class="songs-list">
+    <div class="song-item">
+      <h3>שיר 1 - "חיים שלי"</h3>
+      <p>הסבר על השיר הזה ואפשרות להאזין</p>
+      <a href="karaoke-demo.html" class="btn">הפעל דמוי קריוקי</a>
+    </div>
+    <div class="song-item">
+      <h3>שיר 2 - "בלב שלך"</h3>
+      <p>הסבר על השיר הזה ואפשרות להאזין</p>
+      <a href="karaoke-demo.html" class="btn">הפעל דמוי קריוקי</a>
+    </div>
+    <div class="song-item">
+      <h3>שיר 3 - "רק אהבה"</h3>
+      <p>הסבר על השיר הזה ואפשרות להאזין</p>
+      <a href="karaoke-demo.html" class="btn">הפעל דמוי קריוקי</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Harmonic Vibes. כל הזכויות שמורות.</p>
+    <a href="#">מדיניות פרטיות</a> | <a href="#">תנאים ושירותים</a>
+  </footer>
+
+</body>
+</html>

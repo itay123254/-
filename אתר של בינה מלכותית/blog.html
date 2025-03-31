@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harmonic Vibes - בלוג</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('https://www.offidocs.com/images/darktexturebackgroundblack.jpg') no-repeat center center/cover;
+      background-size: cover;
+      color: white;
+      direction: rtl;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px 30px;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 20px;
+    }
+    .blog-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .blog-header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .blog-header p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+    .blog-posts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .post {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 8px;
+      width: 300px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+    .post:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    }
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .post h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .post p {
+      font-size: 1em;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+    .post a {
+      text-decoration: none;
+      color: #e74c3c;
+      font-size: 1em;
+      text-transform: uppercase;
+    }
+    .post a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">בית</a>
+    <a href="faq.html">שאלות ותשובות</a>
+    <a href="tips.html">טיפים</a>
+    <a href="examples.html">דוגמאות</a>
+    <a href="blog.html">בלוג</a>
+    <a href="contact.html">צור קשר</a>
+  </nav>
+
+  <div class="container">
+    <header class="blog-header">
+      <h1>בלוג הקריוקי של Harmonic Vibes</h1>
+      <p>הכתבות והעדכונים האחרונים בתחום הקריוקי והבידור הביתי</p>
+    </header>
+
+    <section class="blog-posts">
+      <div class="post" onclick="window.location.href='post1.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>5 טיפים לשדרוג חווית הקריוקי בבית</h3>
+        <p>גלה איך להפוך את ערב הקריוקי הביתי שלך לחוויה בלתי נשכחת.</p>
+      </div>
+      <div class="post" onclick="window.location.href='post2.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>איך לבחור את המיקרופון המושלם לקריוקי</h3>
+        <p>המדריך השלם לבחירת מיקרופון שמתאים לצרכים שלך.</p>
+      </div>
+      <div class="post" onclick="window.location.href='post3.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>השירים הכי פופולריים לקריוקי ב-2024</h3>
+        <p>רשימת השירים שכולם אוהבים לשיר יחד בערבי קריוקי.</p>
+      </div>
+      <div class="post" onclick="window.location.href='post4.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>היתרונות של מערכות סאונד מקצועיות לקריוקי</h3>
+        <p>מדוע כדאי להשקיע במערכת סאונד מתקדמת ואיך היא משדרגת את החוויה.</p>
+      </div>
+      <div class="post" onclick="window.location.href='post5.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>הכל על אוזניות קריוקי ואיך לבחור את המתאימות לך</h3>
+        <p>המדריך המלא לבחירת אוזניות שמתאימות לכל צורך.</p>
+      </div>
+      <div class="post" onclick="window.location.href='post6.html'">
+        <img src="https://www.karapella.com/blog/microphone.png" alt="תמונה">
+        <h3>איך להפיק אירוע קריוקי מוצלח</h3>
+        <p>כל הטיפים לאירוע קריוקי מושלם, ממציאת המקום ועד שירי המופת.</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
